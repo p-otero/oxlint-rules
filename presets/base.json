@@ -1,0 +1,39 @@
+{
+  "plugins": ["typescript", "unicorn", "oxc", "import"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
+  "options": {
+    "reportUnusedDisableDirectives": "error"
+  },
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+    "no-debugger": "error",
+    "import/no-cycle": ["error", { "ignoreTypes": true }],
+    "oxc/no-accumulating-spread": "error",
+    "typescript/no-extraneous-class": "error",
+    "no-new": "error",
+    "no-unneeded-ternary": "error",
+    "no-unsafe-optional-chaining": "error",
+    "no-empty-pattern": "error",
+    "unicorn/no-useless-spread": "error",
+    "unicorn/no-useless-fallback-in-spread": "error",
+    "unicorn/require-module-specifiers": "error",
+    "max-lines": [
+      "error",
+      { "max": 400, "skipBlankLines": true, "skipComments": true }
+    ],
+    "p-otero/no-low-value-comments": "error",
+    "p-otero/require-suppression-reason": "error",
+    "p-otero/namespace-node-imports": "off"
+  }
+}

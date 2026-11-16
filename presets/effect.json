@@ -1,0 +1,9 @@
+{
+  "extends": ["../../../@effect/tsgo/oxlint-presets/recommended.json"],
+  "rules": {
+    "effecttsgo/unstable-api-usage": "off",
+    "p-otero/no-inline-schema-compile": "error",
+    "p-otero/prefer-effect-fn": "error",
+    "p-otero/prefer-catch-tags": "error"
+  }
+}

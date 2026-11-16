@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "p-otero/no-effect-outside-hooks": ["error", { "allow": ["**/hooks/**"] }],
+    "p-otero/no-callback-prop-in-effect-deps": "error",
+    "p-otero/require-effect-fetch-cleanup": "error",
+    "p-otero/prefer-sync-external-store": "error",
+    "p-otero/no-latest-ref-effect": "error",
+    "p-otero/no-sticky-request-effect": "error"
+  }
+}

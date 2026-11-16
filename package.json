@@ -1,0 +1,53 @@
+{
+  "name": "@p-otero/oxlint-rules",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Oxlint rules and layered presets: base, react, ui-tailwind and an optional effect layer.",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/plugin.d.ts",
+      "default": "./dist/plugin.js"
+    }
+  },
+  "files": [
+    "dist",
+    "presets",
+    "NOTICE",
+    "LICENSE",
+    "README.md",
+    "AGENTS.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "build:check": "bun run build && git diff --exit-code -- dist",
+    "lint": "oxlint --deny-warnings",
+    "fmt": "bun fmt",
+    "fmt:check": "bun fmt --check",
+    "typecheck": "tsc --noEmit",
+    "test": "bun run build && bun test",
+    "verify": "bun run lint && bun run fmt:check && bun run typecheck && bun run build:check && bun test"
+  },
+  "dependencies": {
+    "@oxlint/plugins": "1.92.0",
+    "oxc-parser": "0.158.0"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.4",
+    "@types/node": "24.19.2",
+    "oxlint": "1.92.0",
+    "typescript": "5.9.3"
+  },
+  "peerDependencies": {
+    "@effect/tsgo": ">=0.67.0"
+  },
+  "peerDependenciesMeta": {
+    "@effect/tsgo": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

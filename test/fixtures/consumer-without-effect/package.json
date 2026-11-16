@@ -1,0 +1,6 @@
+{
+  "name": "consumer-without-effect",
+  "private": true,
+  "type": "module",
+  "dependencies": {}
+}

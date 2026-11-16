@@ -1,0 +1,4 @@
+{
+  "extends": ["../../../presets/base.json", "../../../presets/react.json"],
+  "jsPlugins": ["../../../dist/plugin.js"]
+}

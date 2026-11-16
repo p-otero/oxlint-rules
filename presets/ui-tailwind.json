@@ -1,0 +1,21 @@
+{
+  "rules": {
+    "p-otero/spacing-tokens": [
+      "error",
+      {
+        "roles": [
+          "gap-inline",
+          "gap-items",
+          "gap-group",
+          "gap-section",
+          "px-inset-chip",
+          "py-inset-chip",
+          "px-inset-item",
+          "py-inset-item",
+          "px-control-x",
+          "p-inset-surface"
+        ]
+      }
+    ]
+  }
+}

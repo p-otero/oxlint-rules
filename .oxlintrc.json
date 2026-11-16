@@ -1,0 +1,6 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "extends": ["./presets/base.json"],
+  "jsPlugins": ["./src/plugin.ts"],
+  "ignorePatterns": ["test/fixtures/**", "dist/**"]
+}
