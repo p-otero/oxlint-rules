@@ -99,8 +99,9 @@ Apply rules to part of the tree with `overrides`:
   write product code; see [Effects in agent-written code](#effects-in-agent-written-code).
 - `ui-tailwind.json`: `p-otero/spacing-tokens` with the role token list as its
   `roles` option. Override the list per project.
-- `effect.json`: extends the `@effect/tsgo` oxlint recommended preset (an
-  optional peer dependency accepting `>=0.67.0`), turns
+- `effect.json`: extends the `@effect/tsgo` oxlint strict preset (an
+  optional peer dependency accepting `>=0.67.0`), which has the rules of the
+  recommended preset with every warning raised to an error. It turns
   `effecttsgo/unstable-api-usage` off and enables
   `p-otero/no-inline-schema-compile`, `p-otero/prefer-effect-fn` and
   `p-otero/prefer-catch-tags`. The plugin matches Effect syntax by name and
@@ -214,7 +215,7 @@ maintainer, no npm provenance and frequent releases, so review each bump.
 
 `effect.json` extends `@effect/tsgo` through the root `node_modules` path, so
 the package must be installed at the project root (the default for bun and
-npm). 0.67.x ships the same recommended preset as 0.69, minus
+npm). 0.67.x ships the same strict preset as 0.69, minus
 `effecttsgo/on-exit-failure-to-on-error`, so the optional peer accepts
 `>=0.67.0`. With isolated `node_modules` layouts, import the preset from
 `oxlint.config.ts` instead. Run the Effect rules through `effect-tsgo oxlint`

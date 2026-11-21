@@ -1,5 +1,5 @@
 {
-  "extends": ["../../../@effect/tsgo/oxlint-presets/recommended.json"],
+  "extends": ["../../../@effect/tsgo/oxlint-presets/strict.json"],
   "rules": {
     "effecttsgo/unstable-api-usage": "off",
     "p-otero/no-inline-schema-compile": "error",

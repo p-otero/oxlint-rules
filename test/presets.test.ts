@@ -388,10 +388,10 @@ export function useTitle(title: string) {
     expect(rule[1].roles).toContain("p-inset-surface");
   });
 
-  test("effect preset extends the optional @effect/tsgo preset", () => {
+  test("effect preset extends the optional @effect/tsgo strict preset", () => {
     const effect = readPreset("effect.json");
     expect(effect.extends).toEqual([
-      "../../../@effect/tsgo/oxlint-presets/recommended.json",
+      "../../../@effect/tsgo/oxlint-presets/strict.json",
     ]);
     expect(effect.rules["effecttsgo/unstable-api-usage"]).toBe("off");
     expect(effect.rules["p-otero/no-inline-schema-compile"]).toBe("error");
