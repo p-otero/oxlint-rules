@@ -87,7 +87,8 @@ Apply rules to part of the tree with `overrides`:
   `unicorn/no-useless-spread`; `unicorn/no-useless-fallback-in-spread`;
   `unicorn/require-module-specifiers`; `max-lines` 400 ignoring blank lines and
   comments; `p-otero/no-low-value-comments`;
-  `p-otero/require-suppression-reason`. `p-otero/namespace-node-imports` is
+  `p-otero/require-suppression-reason`; `p-otero/no-global-error`.
+  `p-otero/namespace-node-imports` is
   available but off.
 - `react.json`: the React hook, purity, refs, immutability, set-state,
   derived-state-in-Effect, Effect dependency, static-component and JSX key
@@ -97,6 +98,11 @@ Apply rules to part of the tree with `overrides`:
   component rules enabled with their options.
 - `react-agents.json`: opt-in `useEffect` rules for codebases where agents
   write product code; see [Effects in agent-written code](#effects-in-agent-written-code).
+- `typescript-strict.json`: every oxlint `typescript/*` rule as an error,
+  type-aware ones included, except `prefer-readonly-parameter-types`,
+  `explicit-function-return-type`, `explicit-module-boundary-types` and
+  `explicit-member-accessibility`; `consistent-type-definitions` asks for
+  `type`. See [TypeScript strict layer](#typescript-strict-layer).
 - `ui-tailwind.json`: `p-otero/spacing-tokens` with the role token list as its
   `roles` option. Override the list per project.
 - `effect.json`: extends the `@effect/tsgo` oxlint strict preset (an
@@ -200,6 +206,25 @@ maintainer, no npm provenance and frequent releases, so review each bump.
 }
 ```
 
+### TypeScript strict layer
+
+```json
+{
+  "extends": [
+    "./node_modules/@p-otero/oxlint-rules/presets/base.json",
+    "./node_modules/@p-otero/oxlint-rules/presets/typescript-strict.json"
+  ],
+  "jsPlugins": ["./node_modules/@p-otero/oxlint-rules/dist/plugin.js"],
+  "options": { "typeAware": true }
+}
+```
+
+The type-aware rules need `oxlint-tsgolint` (an optional peer) installed next
+to oxlint and `options.typeAware` in the root config. The four rules left off
+ask for explicit annotations or readonly parameters that Node and DOM types do
+not offer, so they flag correct code; turn them on per project if you want
+them.
+
 ### Effect layer
 
 ```json
@@ -251,6 +276,7 @@ optional. Add it next to the presets:
 | `p-otero/prefer-catch-tags`               | t3code               |                                                       |
 | `p-otero/namespace-node-imports`          | t3code               |                                                       |
 | `p-otero/no-em-dash-copy`                 | t3code               |                                                       |
+| `p-otero/no-global-error`                 | p-otero              |                                                       |
 | `p-otero/no-effect-outside-hooks`         | p-otero              | `allow`, `hooks`                                      |
 | `p-otero/no-callback-prop-in-effect-deps` | p-otero              | `pattern`                                             |
 | `p-otero/no-sticky-request-effect`        | p-otero              | `pattern`                                             |

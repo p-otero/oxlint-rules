@@ -40,10 +40,14 @@
     "typescript": "5.9.3"
   },
   "peerDependencies": {
-    "@effect/tsgo": ">=0.67.0"
+    "@effect/tsgo": ">=0.67.0",
+    "oxlint-tsgolint": ">=7.0.2005"
   },
   "peerDependenciesMeta": {
     "@effect/tsgo": {
+      "optional": true
+    },
+    "oxlint-tsgolint": {
       "optional": true
     }
   },

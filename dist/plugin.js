@@ -7,6 +7,7 @@ import noCallbackPropInEffectDeps from "./rules/no-callback-prop-in-effect-deps.
 import noCrossFeatureImports from "./rules/no-cross-feature-imports.js";
 import noEffectOutsideHooks from "./rules/no-effect-outside-hooks.js";
 import noEmDashCopy from "./rules/no-em-dash-copy.js";
+import noGlobalError from "./rules/no-global-error.js";
 import noInlineSchemaCompile from "./rules/no-inline-schema-compile.js";
 import noLargePrivateComponent from "./rules/no-large-private-component.js";
 import noLatestRefEffect from "./rules/no-latest-ref-effect.js";
@@ -31,6 +32,7 @@ export default definePlugin({
         "no-cross-feature-imports": noCrossFeatureImports,
         "no-effect-outside-hooks": noEffectOutsideHooks,
         "no-em-dash-copy": noEmDashCopy,
+        "no-global-error": noGlobalError,
         "no-inline-schema-compile": noInlineSchemaCompile,
         "no-large-private-component": noLargePrivateComponent,
         "no-latest-ref-effect": noLatestRefEffect,

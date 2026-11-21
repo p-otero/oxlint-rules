@@ -13,6 +13,7 @@ const EXPECTED_RULES = [
   "no-cross-feature-imports",
   "no-effect-outside-hooks",
   "no-em-dash-copy",
+  "no-global-error",
   "no-inline-schema-compile",
   "no-large-private-component",
   "no-latest-ref-effect",

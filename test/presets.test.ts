@@ -272,6 +272,7 @@ describe("presets", () => {
     ]);
     expect(base.rules["p-otero/no-low-value-comments"]).toBe("error");
     expect(base.rules["p-otero/require-suppression-reason"]).toBe("error");
+    expect(base.rules["p-otero/no-global-error"]).toBe("error");
     expect(base.rules["p-otero/namespace-node-imports"]).toBe("off");
     for (const rule of [
       "no-debugger",

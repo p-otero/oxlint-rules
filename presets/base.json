@@ -34,6 +34,7 @@
     ],
     "p-otero/no-low-value-comments": "error",
     "p-otero/require-suppression-reason": "error",
+    "p-otero/no-global-error": "error",
     "p-otero/namespace-node-imports": "off"
   }
 }
